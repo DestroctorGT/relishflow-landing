@@ -17,14 +17,16 @@ function LogoFull({ className }: { className?: string }) {
 }
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false)
+  const [scrolled, setScrolled] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return window.scrollY > 24
+  })
 
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 24)
     }
     window.addEventListener('scroll', onScroll, { passive: true })
-    onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 

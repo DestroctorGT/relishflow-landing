@@ -1,16 +1,5 @@
 type IconProps = { className?: string }
 
-export function FlowNodes({ className = 'h-6 w-6' }: IconProps) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="6" cy="18" r="2"/>
-      <circle cx="12" cy="6" r="2"/>
-      <circle cx="18" cy="18" r="2"/>
-      <path d="M6 18 12 6M12 6 18 18"/>
-    </svg>
-  )
-}
-
 export function QRCode({ className = 'h-6 w-6' }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -56,15 +45,6 @@ export function Analytics({ className = 'h-6 w-6' }: IconProps) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M4 18V9M10 18V5M16 18v-6M4 18h16"/>
-    </svg>
-  )
-}
-
-export function Payment({ className = 'h-6 w-6' }: IconProps) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="2" y="6" width="20" height="12" rx="2"/>
-      <path d="M2 10h20M7 15h4"/>
     </svg>
   )
 }
