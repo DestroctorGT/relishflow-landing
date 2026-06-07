@@ -1,5 +1,6 @@
 import Nav from './components/Nav'
 import RevealSection from './components/RevealSection'
+import CountUp from './components/CountUp'
 import {
   QRCode,
   Dashboard,
@@ -302,19 +303,30 @@ export default function Home() {
         {/* ============ MÉTRICAS ============ */}
         <section className="border-b border-[#DED5C5] border-t border-[#DED5C5] bg-[#FCFAF5] py-8">
           <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-10 px-5 md:gap-16 md:px-10">
-            {[
-              { value: '-32%', label: 'tiempo de espera' },
-              { value: '+18%', label: 'ticket medio' },
-              { value: '12 min', label: 'servicio promedio' },
-              { value: '2.400+', label: 'salones activos' },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="font-bricolage text-3xl font-semibold tracking-tight text-[#0C5048] md:text-4xl">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-xs text-[#6A807C]">{stat.label}</div>
+            <div className="text-center">
+              <div className="font-bricolage text-3xl font-semibold tracking-tight text-[#0C5048] md:text-4xl">
+                <CountUp end={32} prefix="-" suffix="%" />
               </div>
-            ))}
+              <div className="mt-1 text-xs text-[#6A807C]">tiempo de espera</div>
+            </div>
+            <div className="text-center">
+              <div className="font-bricolage text-3xl font-semibold tracking-tight text-[#0C5048] md:text-4xl">
+                <CountUp end={18} prefix="+" suffix="%" />
+              </div>
+              <div className="mt-1 text-xs text-[#6A807C]">ticket medio</div>
+            </div>
+            <div className="text-center">
+              <div className="font-bricolage text-3xl font-semibold tracking-tight text-[#0C5048] md:text-4xl">
+                <CountUp end={12} suffix=" min" />
+              </div>
+              <div className="mt-1 text-xs text-[#6A807C]">servicio promedio</div>
+            </div>
+            <div className="text-center">
+              <div className="font-bricolage text-3xl font-semibold tracking-tight text-[#0C5048] md:text-4xl">
+                <CountUp end={2400} suffix="+" />
+              </div>
+              <div className="mt-1 text-xs text-[#6A807C]">salones activos</div>
+            </div>
           </div>
         </section>
 
