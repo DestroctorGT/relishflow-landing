@@ -71,7 +71,7 @@ export default function FlowDiagram() {
   return (
     <>
       <div className="hidden w-full md:block">
-        <svg viewBox="0 0 800 800" className="mx-auto h-auto w-full max-w-2xl lg:max-w-[700px]" fill="none">
+        <svg viewBox="0 0 800 800" className="mx-auto h-auto w-full max-w-[920px]" fill="none">
           <defs>
             <marker id="fa" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto">
               <path d="M0 0 L7 3.5 L0 7 Z" fill="#66D8C0" />
