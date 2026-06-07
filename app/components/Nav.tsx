@@ -41,10 +41,24 @@ export default function Nav() {
       </a>
 
       <div className="hidden items-center gap-1 md:flex">
-        <a href="#como-funciona" className="rounded-full px-3 py-2 text-sm text-ink-soft no-underline transition-colors hover:bg-bone-2 hover:text-ink">
+        <a
+          href="#como-funciona"
+          className={`rounded-full px-3 py-2 text-sm no-underline transition-colors ${
+            scrolled
+              ? 'text-ink-soft hover:bg-bone-2 hover:text-ink'
+              : 'text-[#A9C0BC] hover:bg-white/10 hover:text-[#F6F2EA]'
+          }`}
+        >
           Cómo funciona
         </a>
-        <a href="#planes" className="rounded-full px-3 py-2 text-sm text-ink-soft no-underline transition-colors hover:bg-bone-2 hover:text-ink">
+        <a
+          href="#planes"
+          className={`rounded-full px-3 py-2 text-sm no-underline transition-colors ${
+            scrolled
+              ? 'text-ink-soft hover:bg-bone-2 hover:text-ink'
+              : 'text-[#A9C0BC] hover:bg-white/10 hover:text-[#F6F2EA]'
+          }`}
+        >
           Planes
         </a>
       </div>
