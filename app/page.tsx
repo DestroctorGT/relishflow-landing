@@ -1,6 +1,7 @@
 import Nav from './components/Nav'
 import RevealSection from './components/RevealSection'
 import CountUp from './components/CountUp'
+import FlowDiagram from './components/FlowDiagram'
 import {
   QRCode,
   Dashboard,
@@ -255,29 +256,7 @@ export default function Home() {
 
             <RevealSection>
               <div className="mt-16">
-                <div className="flex flex-wrap items-center justify-center gap-4 text-center md:gap-6">
-                  {[
-                    'Cliente',
-                    'Mesa',
-                    'Pedidos',
-                    'Cocina',
-                    'Runners',
-                    'Operador',
-                    'Pagos',
-                    'Cierre',
-                  ].map((node, i) => (
-                    <div key={node} className="flex items-center gap-4">
-                      <span className="inline-block rounded-full border border-[#1C443E] bg-[#11302C] px-5 py-2.5 font-bricolage text-sm font-semibold tracking-tight text-[#F6F2EA]">
-                        {node}
-                      </span>
-                      {i < 7 && (
-                        <svg className="hidden h-5 w-5 text-[#4FB3A6] md:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                          <path d="M5 12h14M13 5l7 7-7 7"/>
-                        </svg>
-                      )}
-                    </div>
-                  ))}
-                </div>
+                <FlowDiagram />
               </div>
             </RevealSection>
 
